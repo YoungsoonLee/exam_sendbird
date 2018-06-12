@@ -11,9 +11,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)
 
-
 # Blueprints
 from app.routes.routes import api
+from app.routes.task import task
 
 # routing
 app.register_blueprint(api)
+app.register_blueprint(task)
